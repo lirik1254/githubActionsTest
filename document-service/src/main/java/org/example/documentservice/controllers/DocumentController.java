@@ -22,8 +22,8 @@ public class DocumentController {
     }
 
     @GetMapping("/documents")
-    public String getAllDocuments() {
-        return "hiа";
+    public List<Documents> getAllDocuments() {
+        return documentService.getAllDocuments();
     }
 
     @GetMapping("documents/{id}")
