@@ -64,7 +64,7 @@ public class UserIntegrationTests {
     public void testGetAllUsers() throws Exception {
         when(userRepository.findAll()).thenReturn(List.of(user));
         userService.getAllUsers().forEach(s -> System.out.println(s.getUserId()));
-        mockMvc.perform(get("/usersа"))
+        mockMvc.perform(get("/users"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].name").value("John Doe"));
     }
