@@ -26,7 +26,7 @@ public class DocumentController {
         return documentService.getAllDocuments();
     }
 
-    @GetMapping("/documents/{id}")
+    @GetMapping("documents/{id}")
     public Documents getDocumentById(@PathVariable Integer id) {
         return documentService.getDocumentById(id)
                 .orElseThrow(() -> new DocumentNotFoundException("Document not found with id: " + id));

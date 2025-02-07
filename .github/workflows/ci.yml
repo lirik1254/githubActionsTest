@@ -27,8 +27,12 @@ jobs:
       - name: 🏗️ Сборка document-service с Maven
         run: |
           cd document-service
-          mvn clean package 
-          
+          mvn clean package -DskipTests
+
+      - name: 🚦 Запуск тестов для document-service
+        run: |
+          cd document-service
+          mvn test
 
 
   build-user-service:
