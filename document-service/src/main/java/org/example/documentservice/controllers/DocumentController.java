@@ -26,11 +26,6 @@ public class DocumentController {
         return documentService.getAllDocuments();
     }
 
-    @GetMapping("/testApi")
-    public String getTestAnswer() {
-        return "testString";
-    }
-
     @GetMapping("documents/{id}")
     public Documents getDocumentById(@PathVariable Integer id) {
         return documentService.getDocumentById(id)
