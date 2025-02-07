@@ -46,5 +46,5 @@ jobs:
 
       - name: 🏗️ Сборка user-service с Maven
         run: |
-          cd document-service
+          cd user-service
           mvn clean package
