@@ -27,7 +27,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}  # Закрытый SSH-ключ
           port: 22
           script: |
-            cd /path/to/your/project
+            cd githubActionsTest
             git pull origin master
             cd user-service
             mvn clean package -DskipTests
