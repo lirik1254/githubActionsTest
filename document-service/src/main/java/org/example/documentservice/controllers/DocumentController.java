@@ -23,7 +23,7 @@ public class DocumentController {
 
     @GetMapping("/documents")
     public String getAllDocuments() {
-        return "hi";
+        return "hiа";
     }
 
     @GetMapping("documents/{id}")
