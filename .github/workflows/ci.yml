@@ -53,5 +53,5 @@ jobs:
 
       - name: 🚦 Запуск тестов для user-service
         run: |
-          cd document-service
+          cd user-service
           mvn test
