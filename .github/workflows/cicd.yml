@@ -12,6 +12,7 @@ jobs:
   build-document-service:
     name: 📦 Build Document Service
     runs-on: ubuntu-latest
+    needs: [build-user-service, build-document-service]
 
     steps:
       - name: 📥 Checkout репозитория
