@@ -5,6 +5,12 @@ on:
     branches:
       - master
 
+
+env:
+  SERVER_HOST: 193.124.125.98
+  SERVER_USER: root
+  SERVER_PATH: /root
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
