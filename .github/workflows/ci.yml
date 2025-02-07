@@ -25,7 +25,7 @@ jobs:
           cache: maven
 
       - name: 🏗️ Сборка document-service с Maven
-        run:
+        run: |
           cd document-service
           mvn clean package
 
@@ -45,6 +45,6 @@ jobs:
           cache: maven
 
       - name: 🏗️ Сборка user-service с Maven
-        run:
-          cd user-service
+        run: |
+          cd document-service
           mvn clean package
