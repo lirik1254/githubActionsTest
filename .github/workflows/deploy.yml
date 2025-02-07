@@ -1,0 +1,33 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - master  # Или другая ветка
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ✅ Клонируем репозиторий
+        uses: actions/checkout@v4
+
+      - name: 🚀 Подключаемся к серверу и разворачиваем приложение
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SERVER_IP }}  # IP сервера
+          username: ${{ secrets.SERVER_USER }}  # Пользователь
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd githubActionsTest
+            git pull origin master
+            cd user-service
+            mvn clean package -DskipTests
+            cd ..
+            cd documents-service
+            mvn clean package -DskipTests
+            cd ..
+            docker-compose down
+            docker-compose build
+            docker-compose up -d
