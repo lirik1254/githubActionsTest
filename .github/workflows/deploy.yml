@@ -26,7 +26,7 @@ jobs:
             cd user-service
             mvn clean package -DskipTests
             cd ..
-            cd documents-service
+            cd document-service
             mvn clean package -DskipTests
             cd ..
             docker-compose down
