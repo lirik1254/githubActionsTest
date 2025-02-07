@@ -27,7 +27,7 @@ public class DocumentController {
     }
 
     @GetMapping("/testApi")
-    public String getAllDocuments() {
+    public String getTestAnswer() {
         return "testString";
     }
 
