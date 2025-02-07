@@ -22,8 +22,13 @@ public class DocumentController {
     }
 
     @GetMapping("/documents")
+    public List<Documents> getAllDocuments() {
+        return documentService.getAllDocuments();
+    }
+
+    @GetMapping("/testApi")
     public String getAllDocuments() {
-        return "hii";
+        return "testString";
     }
 
     @GetMapping("documents/{id}")
