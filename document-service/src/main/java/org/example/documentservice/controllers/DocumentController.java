@@ -22,7 +22,7 @@ public class DocumentController {
     }
 
     @GetMapping("/documents")
-    public List<Documents> getAllDocuments() {
+    public List<Documents> test() {
         return documentService.getAllDocuments();
     }
 
