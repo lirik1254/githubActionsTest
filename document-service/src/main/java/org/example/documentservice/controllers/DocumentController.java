@@ -26,6 +26,11 @@ public class DocumentController {
         return documentService.getAllDocuments();
     }
 
+    @GetMapping("/test")
+    public String getAllDocuments() {
+        return "test";
+    }
+
     @GetMapping("documents/{id}")
     public Documents getDocumentById(@PathVariable Integer id) {
         return documentService.getDocumentById(id)
