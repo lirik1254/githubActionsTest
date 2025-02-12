@@ -28,7 +28,7 @@ public class DocumentController {
 
     @GetMapping("/test")
     public String getAllDocuments() {
-        return "testANGLLANGUAGE";
+        return "somethingelse";
     }
 
     @GetMapping("documents/{id}")
